@@ -1,0 +1,20 @@
+---
+import {proyectos} from "../../config/proyectos.json";
+---
+
+<section>
+    {
+        proyectos.map(proyecto =>{
+            return  <div class="flex flex-col md:flex-row text-center md:text-left mb-2">
+                <div class="flex-1 p-4">
+                    <h2 class="font-bold text-2xl my-4">{proyecto.title}</h2>
+                    <p>{proyecto.description}</p>
+                    <button class="mt-4 py-2 px-3">Buy Now</button>
+                </div>
+                <div class="flex-1">
+                    <img src="fingerPrint.svg" class="w-72 m-auto" />
+                </div>
+            </div>
+        })
+    }
+</section>
